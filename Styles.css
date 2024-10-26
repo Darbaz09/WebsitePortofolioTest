@@ -1,167 +1,84 @@
-﻿/* Reset styles for all elements */
+﻿body {
+    color: white;
+    height: 100vh; 
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+}
+
+.Darbaz {
+        font-size: 0.5em; 
+        display: inline-block; 
+    }
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    color: #ccc;
-    line-height: 1.6;
-    overflow-x: hidden;
-    opacity: 0; /* Initially hidden */
-    transform: translateY(30px); /* Slightly shifted down */
-    animation: page-fade-in 1.5s ease-out forwards; /* Animate on page load */
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-header {
-    background: rgba(50, 50, 50, 0.2);
-    color: #f5f5f5;
-    padding: 60px 0;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 2.8rem;
-    animation: slide-in-left 1s ease-out;
-}
-
-header .alias {
-    font-size: 1.3rem;
-    color: #adadff;
-}
-
-header p {
-    font-size: 1.2rem;
-    margin-top: 15px;
-    animation: slide-in-right 1.2s ease-out;
-}
-
-.work-showcase {
-    padding: 60px 0;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.8);
-}
-
-.work-showcase h2 {
-    font-size: 2rem;
-    color: #adadff;
-    margin-bottom: 40px;
-}
-
-.videos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.video-item {
-    width: 280px;
-    margin: 20px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.video-item img {
+.header {
     width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
-
-.video-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
-}
-
-.video-item p {
-    margin-top: 10px;
-    font-size: 1.1rem;
-    color: #adadff;
-}
-
-.connect {
-    background: rgba(50, 50, 50, 0.9);
-    padding: 60px 0;
+.container {
+    height: 200px;
+    width: 100%; 
+    padding: 20px;  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
     text-align: center;
-}
-
-.connect h2 {
-    font-size: 2rem;
-    color: #adadff;
-    margin-bottom: 20px;
-}
-
-.connect .btn {
-    background: #adadff;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-.connect .btn:hover {
-    background: #7766ff;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
-}
-
-footer {
-    background: rgba(50, 50, 50, 0.8);
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer p {
     margin: 0;
-    animation: fade-in 2s ease-out;
 }
 
-/* Keyframes for page fade-in animation */
-@keyframes page-fade-in {
-    from {
-        opacity: 0;
-        transform: translateY(30px); /* Starts slightly lower */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0); /* Moves to original position */
-    }
+.line {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: linear-gradient(90deg, transparent, transparent 48%, white 48%, white 52%, transparent 52%, transparent);
 }
 
-/* Slide-in animation keyframes */
-@keyframes slide-in-left {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
+h1 {
+    margin: 0; 
+    font-size: 2em; 
 }
 
-@keyframes slide-in-right {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-
+p {
+    margin: 0; 
+    font-size: 1em; 
 }
 
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.Rtext {
+    margin-top:  100px;
+    font-size: 1.5em; /* Adjust size as needed */
+}
+.game-list {
+    display: flex; 
+    justify-content: center;
+    list-style-type: none; 
+    padding: 10px 0; 
+    background-color: #4db6e1;
+    margin: 0px 0; 
+    width: 100%; 
+    height: 400px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+.game-list  {
+    margin: 0 20px; 
+    font-size: 1.2em; 
+    color: #333; 
+}
+
+.game-box {
+    background-color: #ffffff; 
+    color: #2c3e50; 
+    padding: 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    text-align: center; 
+    flex: 1; 
+    margin: 0 10px; 
+    transition: transform 0.3s; 
 }
